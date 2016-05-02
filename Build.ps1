@@ -1,6 +1,6 @@
 param(
-    [String] $majorMinor = "5.5",  # 5.5
-    [String] $patch = "1",         # $env:APPVEYOR_BUILD_VERSION
+    [String] $majorMinor = "5.6",  # 5.6
+    [String] $patch = "0",         # $env:APPVEYOR_BUILD_VERSION
     [String] $customLogger = "",   # C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll
     [Switch] $notouch,
     [String] $project = "ReflectSoftware.Insight.Extensions.EnterpriseLibrary5"
@@ -48,7 +48,7 @@ function Invoke-NuGetPack($version)
     #ls src/**/*.csproj |
     #    Where-Object { -not ($_.Name -like "*net40*") } |
     #    ForEach-Object { Invoke-NuGetPackProj $_ }
-		
+
 		ls src/**/*.csproj |
         Where-Object { -not ($_.Name -like "*net40*") } |
         ForEach-Object { Invoke-NuGetPackProj $_ }
@@ -60,9 +60,9 @@ function Invoke-NuGetPack($version)
 
 function Invoke-Build($project, $majorMinor, $patch, $customLogger, $notouch)
 {
-    $solution2 = "$project 2.0.sln" 
-    $solution4 = "$project 4.0.sln" 
-	
+    #$solution2 = "$project 2.0.sln"
+    $solution4 = "$project 4.0.sln"
+
     $package="$majorMinor.$patch"
 
     Write-Output "$project $package"
@@ -74,12 +74,12 @@ function Invoke-Build($project, $majorMinor, $patch, $customLogger, $notouch)
         Write-Output "Assembly version will be set to $assembly"
         Set-AssemblyVersions $package $assembly
     }
-	
-	Install-NuGetPackages $solution4    
+
+	Install-NuGetPackages $solution4
     Invoke-MSBuild $solution4 $customLogger
-	
-	Install-NuGetPackages $solution2    
-    Invoke-MSBuild $solution2 $customLogger
+
+	#Install-NuGetPackages $solution2
+    #Invoke-MSBuild $solution2 $customLogger
 
     Invoke-NuGetPack $package
 }
