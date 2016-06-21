@@ -6,7 +6,7 @@
 [![NuGet Version](http://img.shields.io/nuget/v/reflectsoftware.insight.extensions.enterpriselibrary5.svg?style=flat)](http://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.enterpriselibrary5/)
 [![Stars](https://img.shields.io/github/stars/reflectsoftware/reflectinsight-extensions-enterpriselibrary5.svg)](https://github.com/reflectsoftware/reflectinsight-extensions-enterpriselibrary5/stargazers)
 
-**Package** - [ReflectSoftware.Insight.Extensions.enterpriselibrary5](http://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.enterpriselibrary5/) | **Platforms** - .NET 4.0
+**Package** - [ReflectSoftware.Insight.Extensions.enterpriselibrary5](http://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.enterpriselibrary5/) | **Platforms** - .NET 4.5.1 and above
 
 ## Overview ##
 
