@@ -1,11 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{42B0F2D4-228B-4E1B-B81C-685CEE15D2E4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{42B0F2D4-228B-4E1B-B81C-685CEE15D2E4}"
 	ProjectSection(SolutionItems) = preProject
-		Build.ps1 = Build.ps1
 		CHANGES.md = CHANGES.md
 		LICENSE.md = LICENSE.md
 		README.md = README.md
@@ -18,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB789FCF-977
 		src\ReflectSoftware.Insight.Extensions.EnterpriseLibrary5.nuspec = src\ReflectSoftware.Insight.Extensions.EnterpriseLibrary5.nuspec
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{12311633-181D-4219-B861-5626BA15F404}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{87C490F5-FDB5-4B73-9077-EDD602896362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectInsight.Extensions.EnterpriseLibrary.Sample", "Sample\ReflectInsight.Extensions.EnterpriseLibrary.Sample\ReflectInsight.Extensions.EnterpriseLibrary.Sample.csproj", "{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,11 +33,20 @@ Global
 		{A4AC3FD1-3A3B-48C8-8300-EA52A7569E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AC3FD1-3A3B-48C8-8300-EA52A7569E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4AC3FD1-3A3B-48C8-8300-EA52A7569E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A4AC3FD1-3A3B-48C8-8300-EA52A7569E93} = {12311633-181D-4219-B861-5626BA15F404}
 		{AB789FCF-9776-40DA-8682-DD0708346F94} = {42B0F2D4-228B-4E1B-B81C-685CEE15D2E4}
+		{B215B57C-E07A-4BC8-BFB6-A10B8A2E2B66} = {87C490F5-FDB5-4B73-9077-EDD602896362}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6423B7A9-B5A6-429E-A618-DDD9A972F894}
 	EndGlobalSection
 EndGlobal
